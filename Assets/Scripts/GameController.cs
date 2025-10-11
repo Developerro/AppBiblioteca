@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI textC;   
     public TextMeshProUGUI textD;
 
+    public static string choice;
+
     public static int classico = 0;
     public static int emotivo = 0;
     public static int curioso = 0;
@@ -37,8 +39,6 @@ public class GameController : MonoBehaviour
     Dictionary<string, string> options4;
 
     Dictionary<string, string> options5;
-
-
 
 
     void Start()
@@ -85,9 +85,16 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void setNormal()
+    {
+        textA.color = Color.white; textB.color = Color.white; textC.color = Color.white; textD.color = Color.white;
+    }
     void Update()
     {
-        
+        if (choice == "a") { classico++; setNormal();  textA.color = Color.green; }
+        else if (choice == "b") { emotivo++; setNormal(); textB.color = Color.green; }
+        else if (choice == "c") { curioso++; setNormal(); textC.color = Color.green; }
+        else if (choice == "d") { intuitivo++; setNormal(); textD.color = Color.green; }
     }
 
     public void ChangeTexts()
@@ -107,11 +114,22 @@ public class GameController : MonoBehaviour
     }
 
 
-    public void OptionA() { classico++; ChangeTexts(); }
+    public void OptionA() { choice = "a"; }
 
-    public void OptionB() { emotivo++; ChangeTexts(); }   
+    public void OptionB() { choice = "b"; }   
 
-    public void OptionC() { curioso++; ChangeTexts(); }   
+    public void OptionC() { choice = "c"; }   
 
-    public void OptionD() { intuitivo++; ChangeTexts(); }
+    public void OptionD() { choice = "d"; }
+
+
+    public void Confirm()
+    {
+        if (choice == "a") { classico++; }
+        else if (choice == "b") { emotivo++; }
+        else if (choice == "c") { curioso++; }
+        else if (choice == "d") { intuitivo++; }
+        setNormal();
+        ChangeTexts();
+    }
 }
