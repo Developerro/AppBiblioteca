@@ -573,6 +573,7 @@ MonoBehaviour:
   buttonB: {fileID: 43560334}
   buttonC: {fileID: 1809105188}
   buttonD: {fileID: 2091697457}
+  confirmButton: {fileID: 1046087704}
   question: {fileID: 995741392}
   textA: {fileID: 67000708}
   textB: {fileID: 1632726020}

@@ -1,29 +1,20 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Perfil : MonoBehaviour
 {
     public TextMeshProUGUI perfil;
     void Start()
     {
+        List<string> perfis = new List<string>();
         int maiorValor = Mathf.Max(GameController.classico, GameController.emotivo, GameController.curioso, GameController.intuitivo);
 
-        if (maiorValor == GameController.classico)
-        {
-            perfil.text = "Clássico";
-        }
-        else if (maiorValor == GameController.emotivo)
-        {
-            perfil.text = "Emotivo";
-        }
-        else if (maiorValor == GameController.curioso)
-        {
-            perfil.text = "Curioso";
-        }
-        else if (maiorValor == GameController.intuitivo)
-        {
-            perfil.text = "Intuitivo";
-        }
+        if (GameController.classico == maiorValor) perfis.Add("Clássico");
+        if (GameController.emotivo == maiorValor) perfis.Add("Emotivo");
+        if (GameController.curioso == maiorValor) perfis.Add("Curioso");
+        if (GameController.intuitivo == maiorValor) perfis.Add("Intuitivo");
+
+        perfil.text = string.Join(" e ", perfis);
     }
 }
