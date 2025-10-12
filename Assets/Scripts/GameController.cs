@@ -129,4 +129,13 @@ public class GameController : MonoBehaviour
         else if (choice == "d") { intuitivo++; }
         ChangeTexts();
     }
+    
+    [RuntimeInitializeOnLoadMethod]
+    static void OnRuntimeMethodLoad()
+    {
+        classico = 0;
+        emotivo = 0;
+        curioso = 0;
+        intuitivo = 0;
+    }
 }
