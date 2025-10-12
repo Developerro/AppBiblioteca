@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 8de11c818923bc843bb5f1b41f0049b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5040138223134448500
+    second: LivroAberto 1_0
+  - first:
+      213: -1837529415328878858
+    second: LivroAberto 1_1
+  - first:
+      213: -4192437961785625783
+    second: LivroAberto 1_2
+  - first:
+      213: -6766592273909425994
+    second: LivroAberto 1_3
+  - first:
+      213: -8521025356191793106
+    second: LivroAberto 1_4
+  - first:
+      213: 8353099401726709845
+    second: LivroAberto 1_5
+  - first:
+      213: -240310033219321164
+    second: LivroAberto 1_6
+  - first:
+      213: 3231481476459335015
+    second: LivroAberto 1_7
+  - first:
+      213: -4209665062471583680
+    second: LivroAberto 1_8
+  - first:
+      213: -8038128245459746673
+    second: LivroAberto 1_9
+  - first:
+      213: -1208584006393787735
+    second: LivroAberto 1_10
+  - first:
+      213: 4841228090505933339
+    second: LivroAberto 1_11
+  - first:
+      213: -5404349707821505110
+    second: LivroAberto 1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LivroAberto 1_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 176
+        width: 98
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84e3376df4dd0ab0800000000000000
+      internalID: -5040138223134448500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 185
+        width: 66
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feadfe7bb8cf76e0800000000000000
+      internalID: -1837529415328878858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 230
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943b7e0e2e771d5c0800000000000000
+      internalID: -4192437961785625783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 225
+        width: 11
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8d9b58d2c3812a0800000000000000
+      internalID: -6766592273909425994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 243
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20871ab59c3fb980800000000000000
+      internalID: -8521025356191793106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 212
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550d27536ab2ce370800000000000000
+      internalID: 8353099401726709845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 214
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2000a4c4f3aacf0800000000000000
+      internalID: -240310033219321164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 469
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d0d9e184788dc20800000000000000
+      internalID: 3231481476459335015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_8
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 191
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0483200fde34495c0800000000000000
+      internalID: -4209665062471583680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f808656d2f4d27090800000000000000
+      internalID: -8038128245459746673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 84
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa0ea1ef3f3a3fe0800000000000000
+      internalID: -1208584006393787735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 70
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12bf336c4f7f2340800000000000000
+      internalID: 4841228090505933339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivroAberto 1_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 42
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5205ff294eff4b0800000000000000
+      internalID: -5404349707821505110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LivroAberto 1_0: -5040138223134448500
+      LivroAberto 1_1: -1837529415328878858
+      LivroAberto 1_10: -1208584006393787735
+      LivroAberto 1_11: 4841228090505933339
+      LivroAberto 1_12: -5404349707821505110
+      LivroAberto 1_2: -4192437961785625783
+      LivroAberto 1_3: -6766592273909425994
+      LivroAberto 1_4: -8521025356191793106
+      LivroAberto 1_5: 8353099401726709845
+      LivroAberto 1_6: -240310033219321164
+      LivroAberto 1_7: 3231481476459335015
+      LivroAberto 1_8: -4209665062471583680
+      LivroAberto 1_9: -8038128245459746673
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

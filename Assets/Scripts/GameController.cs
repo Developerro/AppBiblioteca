@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -18,18 +19,32 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI textB;
     public TextMeshProUGUI textC;
     public TextMeshProUGUI textD;
+    public Color optionsTextSelectedColor;
+    public Image questionIcon;
+    public List<Sprite> questionsIcons = new List<Sprite>(5);
+    
     public static string choice;
     public static int classico = 0;
     public static int emotivo = 0;
     public static int curioso = 0;
     public static int intuitivo = 0;
+    
     public List<Dictionary<string, string>> pages = new List<Dictionary<string, string>>();
+    
     Dictionary<string, string> pageNow;
     Dictionary<string, string> options1;
     Dictionary<string, string> options2;
     Dictionary<string, string> options3;
     Dictionary<string, string> options4;
     Dictionary<string, string> options5;
+    
+    
+    private Color _optionsTextDefaultColor;
+
+    private void Awake()
+    {
+        _optionsTextDefaultColor = textA.color;
+    }
 
     void Start()
     {
@@ -37,66 +52,129 @@ public class GameController : MonoBehaviour
 
         options1 = new Dictionary<string, string>
         {
-            { "A", "Um enredo profundo, com reflexıes filosÛficas ou sociais" },
-            { "B", "EmoÁıes intensas e personagens com histÛrias marcantes" },
-            { "C", "MistÈrios, enigmas e reviravoltas inesperadas" },
-            { "D", "Temas sobre autoconhecimento, espiritualidade ou mudanÁas de vida" },
-            { "question", "O que mais te atrai ao escolher um livro?" }
+            { "A", "Um enredo profundo, com reflex√µes filos√≥ficas ou sociais;" },
+            { "B", "Emo√ß√µes intensas e personagens com hist√≥rias marcantes;" },
+            { "C", "Mist√©rios, enigmas e reviravoltas inesperadas;" },
+            { "D", "Temas sobre autoconhecimento, espiritualidade ou mudan√ßas de vida." },
+            { "question", "1. O que mais te atrai ao escolher um livro?" }
         };
         pages.Add(options1);
 
         options2 = new Dictionary<string, string>
         {
             { "A", "Inspirado(a) a pensar mais criticamente sobre o mundo" },
-            { "B", "Emocionado(a), como se tivesse vivido aquela histÛria" },
+            { "B", "Emocionado(a), como se tivesse vivido aquela histÔøΩria" },
             { "C", "Motivado(a) a pesquisar mais sobre o tema ou autor" },
             { "D", "Transformado(a), como se tivesse aprendido algo sobre si mesmo(a)" },
-            { "question", "Como vocÍ se sente ao terminar uma boa leitura" }
+            { "question", "2. Como voc√™ se sente ao terminar uma boa leitura?" }
         };
         pages.Add(options2);
 
         options3 = new Dictionary<string, string>
         {
-            { "A", "ì1984î ñ George Orwell / Cl·ssicos da literatura mundial" },
-            { "B", "ìA Culpa È das Estrelasî ñ John Green / Romances intensos" },
-            { "C", "ìO CÛdigo Da Vinciî ñ Dan Brown / FicÁ„o investigativa" },
-            { "D", "O Poder do Agoraî ñ Eckhart Tolle / Desenvolvimento pessoal" },
-            { "question", "Qual desses livros (ou estilos) mais te chama a atenÁ„o?" }
+            { "A", " ‚Äú1984‚Äù ‚Äì George Orwell / Cl√°ssicos da literatura mundial;" },
+            { "B", "‚ÄúA Culpa √© das Estrelas‚Äù ‚Äì John Green / Romances intensos;" },
+            { "C", " ‚ÄúO C√≥digo Da Vinci‚Äù ‚Äì Dan Brown / Fic√ß√£o investigativa;" },
+            { "D", "‚ÄúO Poder do Agora‚Äù ‚Äì EckhartTolle / Desenvolvimento pessoal." },
+            { "question", "3. Qual desses livros (ou estilos) mais te chama a aten√ß√£o?" }
         };
         pages.Add(options3);
 
         options4 = new Dictionary<string, string>
         {
-            { "A", "Literatura cl·ssica ou n„o-ficÁ„o filosÛfica" },
-            { "B", "Romance, drama ou fantasia com foco emocional" },
-            { "C", "Suspense, ficÁ„o cientÌfica ou thrillers" },
+            { "A", "Literatura cl√°ssica ou n√£o-fic√ß√£o filos√≥fica;" },
+            { "B", "Romance, drama ou fantasia com foco emocional;" },
+            { "C", "Suspense, fic√ß√£o cient√≠fica ou thrillers;" },
             { "D", "Autoajuda, espiritualidade ou psicologia." },
-            { "question", "VocÍ est· em uma livraria. Para onde vai primeiro?" }
+            { "question", "4. Voc√™ est√° em uma livraria. Para onde vai primeiro?" }
         };
         pages.Add(options4);
 
         options5 = new Dictionary<string, string>
         {
-            { "A", "Um livro que me faÁa refletir sobre a sociedade e os valores humanos" },
-            { "B", "Uma histÛria envolvente, para eu me emocionar e viajar na imaginaÁ„o" },
-            { "C", "Um enredo cheio de pistas e mistÈrios que estimule meu raciocÌnio" },
+            { "A", "Um livro que me fa√ßa refletir sobre a sociedade e os valores humanos" },
+            { "B", "Uma hist√≥ria envolvente, para eu me emocionar e viajar na imagina√ß√£o" },
+            { "C", "Um enredo cheio de pistas e mist√©rios que estimule meu racioc√≠nio" },
             { "D", "Uma leitura que me ajude a crescer como pessoa e repensar minha vida" },
-            { "question", "Que tipo de leitura mais combina com seu momento atual?" }
+            { "question", "5. Que tipo de leitura mais combina com seu momento atual?" }
         };
         pages.Add(options5);
 
-        ChangeTexts();
+        UpdatteQuestionsPage();
     }
 
-    public void setNormal()
+    public void UpdateButtomStatus()
     {
-        textA.color = Color.white;
-        textB.color = Color.white;
-        textC.color = Color.white;
-        textD.color = Color.white;
+        switch (choice)
+        {
+            case "a":
+                textA.color = optionsTextSelectedColor;
+                buttonA.interactable = false;
+                
+                textB.color = _optionsTextDefaultColor;
+                buttonB.interactable = true;
+                
+                textC.color = _optionsTextDefaultColor;
+                buttonC.interactable = true;
+                
+                textD.color = _optionsTextDefaultColor;
+                buttonD.interactable = true;
+                break;
+            case "b":
+                textB.color = optionsTextSelectedColor;
+                buttonB.interactable = false;
+                
+                textA.color = _optionsTextDefaultColor;
+                buttonA.interactable = true;
+                
+                textC.color = _optionsTextDefaultColor;
+                buttonC.interactable = true;
+                
+                textD.color = _optionsTextDefaultColor;
+                buttonD.interactable = true;
+                break;
+            case "c":
+                textC.color = optionsTextSelectedColor;
+                buttonC.interactable = false;
+                
+                textA.color = _optionsTextDefaultColor;
+                buttonA.interactable = true;
+                
+                textB.color = _optionsTextDefaultColor;
+                buttonB.interactable = true;
+                
+                textD.color = _optionsTextDefaultColor;
+                buttonD.interactable = true;
+                break;
+            case "d":
+                textD.color = optionsTextSelectedColor;
+                buttonD.interactable = false;
+                
+                textA.color = _optionsTextDefaultColor;
+                buttonA.interactable = true;
+                
+                textB.color = _optionsTextDefaultColor;
+                buttonB.interactable = true;
+                
+                textC.color = _optionsTextDefaultColor;
+                buttonC.interactable = true;
+                break;
+            default:
+                textA.color = _optionsTextDefaultColor;
+                textB.color = _optionsTextDefaultColor;
+                textC.color = _optionsTextDefaultColor;
+                textD.color = _optionsTextDefaultColor;
+                
+                buttonA.interactable = true;
+                buttonB.interactable = true;
+                buttonC.interactable = true;
+                buttonD.interactable = true;
+                
+                break;
+        }
     }
 
-    public void ChangeTexts()
+    public void UpdatteQuestionsPage()
     {
         if (pageIndex >= pages.Count)
         {
@@ -110,16 +188,16 @@ public class GameController : MonoBehaviour
         textC.text = pageNow["C"];
         textD.text = pageNow["D"];
         question.text = pageNow["question"];
-        pageIndex++;
-        setNormal();
+        questionIcon.sprite = questionsIcons[pageIndex];
         confirmButton.interactable = false;
         choice = null;
+        UpdateButtomStatus();
     }
-
-    public void OptionA() { choice = "a"; setNormal(); textA.color = Color.green; confirmButton.interactable = true; }
-    public void OptionB() { choice = "b"; setNormal(); textB.color = Color.green; confirmButton.interactable = true; }
-    public void OptionC() { choice = "c"; setNormal(); textC.color = Color.green; confirmButton.interactable = true; }
-    public void OptionD() { choice = "d"; setNormal(); textD.color = Color.green; confirmButton.interactable = true; }
+    
+    public void OptionA() { choice = "a"; UpdateButtomStatus(); confirmButton.interactable = true; }
+    public void OptionB() { choice = "b"; UpdateButtomStatus(); confirmButton.interactable = true; }
+    public void OptionC() { choice = "c"; UpdateButtomStatus(); confirmButton.interactable = true; }
+    public void OptionD() { choice = "d"; UpdateButtomStatus(); confirmButton.interactable = true; }
 
     public void Confirm()
     {
@@ -127,15 +205,17 @@ public class GameController : MonoBehaviour
         else if (choice == "b") { emotivo++; }
         else if (choice == "c") { curioso++; }
         else if (choice == "d") { intuitivo++; }
-        ChangeTexts();
+        pageIndex++;
+        UpdatteQuestionsPage();
     }
     
     [RuntimeInitializeOnLoadMethod]
-    static void OnRuntimeMethodLoad()
+    public static void OnRuntimeMethodLoad()
     {
         classico = 0;
         emotivo = 0;
         curioso = 0;
         intuitivo = 0;
+        choice = null;
     }
 }
