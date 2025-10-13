@@ -296,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[2]'
       value: 
-      objectReference: {fileID: 21300000, guid: cb93140f411245a49b86095df7a5cc90, type: 3}
+      objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[3]'
       value: 
@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[4]'
       value: 
-      objectReference: {fileID: 21300000, guid: 258b18601c278dc42aca31e753755800, type: 3}
+      objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[5]'
       value: 
@@ -312,7 +312,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[6]'
       value: 
-      objectReference: {fileID: 21300000, guid: 6da69b7338161b445915c377b6c86015, type: 3}
+      objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[7]'
       value: 
@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[8]'
       value: 
-      objectReference: {fileID: 21300000, guid: fa087cb40a89fd4468370dd9b913fe02, type: 3}
+      objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[9]'
       value: 
@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[10]'
       value: 
-      objectReference: {fileID: 21300000, guid: 3beed2a322d4ea54e94245a827a37ccc, type: 3}
+      objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[11]'
       value: 
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 92ee1ec73e5d88b4fbd42beb5848baf7, type: 3}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.2310961
+      value: 0.19715735
       objectReference: {fileID: 0}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.x
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 4166.124
+      value: 4883.282
       objectReference: {fileID: 0}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -359,11 +359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22436914, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 6411.12
+      value: 7266.16
       objectReference: {fileID: 0}
     - target: {fileID: 22436914, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 7680.06
+      value: 10245.18
       objectReference: {fileID: 0}
     - target: {fileID: 22437570, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.x
@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22437570, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 7680.06
+      value: 10245.18
       objectReference: {fileID: 0}
     - target: {fileID: 22443772, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Pivot.x
@@ -447,7 +447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.2310961
+      value: 0.19715735
       objectReference: {fileID: 0}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.x
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 4166.124
+      value: 4883.282
       objectReference: {fileID: 0}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mode: 0
-  PageFlipTime: 1
-  TimeBetweenPages: 1
+  PageFlipTime: 0.44
+  TimeBetweenPages: 0.41
   DelayBeforeStarting: 0
   AutoStartFlip: 0
   ControledBook: {fileID: 0}
@@ -796,7 +796,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740410508143340229, guid: 3ff8002242c9bf54e8c774170a3ddc76, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582482495040489416, guid: 3ff8002242c9bf54e8c774170a3ddc76, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582482495040489416, guid: 3ff8002242c9bf54e8c774170a3ddc76, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91
       objectReference: {fileID: 0}
     - target: {fileID: 2628838806820305551, guid: 3ff8002242c9bf54e8c774170a3ddc76, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

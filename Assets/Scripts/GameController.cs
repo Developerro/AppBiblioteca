@@ -130,6 +130,18 @@ public class GameController : MonoBehaviour
     
     private IEnumerator FlipPagRoutine()
     {
+        var quizImages = quizCanvas.GetComponentsInChildren<Image>(true);
+        foreach (var img in quizImages)
+        {
+            img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+        }
+        
+        var quizTexts = quizCanvas.GetComponentsInChildren<TextMeshProUGUI>(true);
+        foreach (var txt in quizTexts)
+        {
+            txt.faceColor = new Color(txt.faceColor.r, txt.faceColor.g, txt.faceColor.b, 0f);
+        }
+        
         if (_gameState == GameState.Menu)
         {
             _gameState = GameState.Quiz;
@@ -156,23 +168,34 @@ public class GameController : MonoBehaviour
         
         autoFlipBook.FlipRightPage();
         
-        yield return new WaitForSeconds(1.5f); // Espera 1 segundo (ajuste conforme necessário)
+        yield return new WaitForSeconds(0.4f); // Espera 1 segundo (ajuste conforme necessário)
         
         if(_gameState == GameState.Quiz)
         {
             quizCanvas.SetActive(true);
         }
-        
-    }
 
-    /*private void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
+        // Interpolate alpha from 0 to 1 for all images and texts in quizCanvas
+        float duration = 0.5f; // Duração da interpolação
+        float elapsed = 0f;
+        while (elapsed < duration)
         {
-            ScreenCapture.CaptureScreenshot($"screenshot_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-            Debug.Log("Screenshot taken!");
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Clamp01(elapsed / duration);
+            foreach (var img in quizImages)
+            {
+                img.color = new Color(img.color.r, img.color.g, img.color.b, alpha);
+            }
+
+            foreach (var txt in quizTexts)
+            {
+                txt.faceColor = new Color(txt.faceColor.r, txt.faceColor.g, txt.faceColor.b, alpha);
+            }
+
+            yield return null;
         }
-    }*/
+
+    }
 
     public void UpdateButtomStatus()
     {
