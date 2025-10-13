@@ -32,11 +32,13 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI textB;
     public TextMeshProUGUI textC;
     public TextMeshProUGUI textD;
+    public Color optionsSelectedColor;
     public Color optionsTextSelectedColor;
     public Image questionIcon;
     public List<Sprite> questionsIcons = new List<Sprite>(5);
     public AutoFlip autoFlipBook;
     public Book book;
+    public List<Image> optionsImageBackgrounds = new List<Image>(4);
     
     public static string choice;
     public static int classico = 0;
@@ -53,13 +55,14 @@ public class GameController : MonoBehaviour
     Dictionary<string, string> options4;
     Dictionary<string, string> options5;
     
-    
+    private Color _optionsDefaultColor;
     private Color _optionsTextDefaultColor;
     private Perfil _perfil;
     private GameState _gameState = GameState.Menu;
 
     private void Awake()
     {
+        _optionsDefaultColor = optionsImageBackgrounds[0].color;
         _optionsTextDefaultColor = textA.color;
         _perfil = GetComponent<Perfil>();
         
@@ -202,55 +205,104 @@ public class GameController : MonoBehaviour
         switch (choice)
         {
             case "a":
+                
                 textA.color = optionsTextSelectedColor;
+                optionsImageBackgrounds[0].color = optionsSelectedColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>(true).color = optionsTextSelectedColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>(true).faceColor = optionsTextSelectedColor;
                 buttonA.interactable = false;
                 
                 textB.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[1].color = _optionsDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonB.interactable = true;
                 
                 textC.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[2].color = _optionsDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonC.interactable = true;
                 
                 textD.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[3].color = _optionsDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonD.interactable = true;
                 break;
             case "b":
                 textB.color = optionsTextSelectedColor;
+                optionsImageBackgrounds[1].color = optionsSelectedColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().color = optionsTextSelectedColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().faceColor = optionsTextSelectedColor;
                 buttonB.interactable = false;
                 
                 textA.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[0].color = _optionsDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonA.interactable = true;
                 
                 textC.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[2].color = _optionsDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonC.interactable = true;
                 
                 textD.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[3].color = _optionsDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonD.interactable = true;
                 break;
             case "c":
                 textC.color = optionsTextSelectedColor;
+                optionsImageBackgrounds[2].color = optionsSelectedColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().color = optionsTextSelectedColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().faceColor = optionsTextSelectedColor;
                 buttonC.interactable = false;
                 
                 textA.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[0].color = _optionsDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonA.interactable = true;
                 
                 textB.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[1].color = _optionsDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonB.interactable = true;
                 
                 textD.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[3].color = _optionsDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonD.interactable = true;
                 break;
             case "d":
                 textD.color = optionsTextSelectedColor;
+                optionsImageBackgrounds[3].color = optionsSelectedColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().color = optionsTextSelectedColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().faceColor = optionsTextSelectedColor;
                 buttonD.interactable = false;
                 
                 textA.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[0].color = _optionsDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonA.interactable = true;
                 
                 textB.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[1].color = _optionsDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonB.interactable = true;
                 
                 textC.color = _optionsTextDefaultColor;
+                optionsImageBackgrounds[2].color = _optionsDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 buttonC.interactable = true;
                 break;
             default:
@@ -258,6 +310,20 @@ public class GameController : MonoBehaviour
                 textB.color = _optionsTextDefaultColor;
                 textC.color = _optionsTextDefaultColor;
                 textD.color = _optionsTextDefaultColor;
+                
+                optionsImageBackgrounds[0].color = _optionsDefaultColor;
+                optionsImageBackgrounds[1].color = _optionsDefaultColor;
+                optionsImageBackgrounds[2].color = _optionsDefaultColor;
+                optionsImageBackgrounds[3].color = _optionsDefaultColor;
+                
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonA.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonB.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonC.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().color = _optionsTextDefaultColor;
+                buttonD.GetComponentInChildren<TextMeshProUGUI>().faceColor = _optionsTextDefaultColor;
                 
                 buttonA.interactable = true;
                 buttonB.interactable = true;
