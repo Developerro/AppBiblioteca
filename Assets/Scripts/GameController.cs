@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
         options2 = new Dictionary<string, string>
         {
             { "A", "Inspirado(a) a pensar mais criticamente sobre o mundo" },
-            { "B", "Emocionado(a), como se tivesse vivido aquela hist�ria" },
+            { "B", "Emocionado(a), como se tivesse vivido aquela história" },
             { "C", "Motivado(a) a pesquisar mais sobre o tema ou autor" },
             { "D", "Transformado(a), como se tivesse aprendido algo sobre si mesmo(a)" },
             { "question", "2. Como você se sente ao terminar uma boa leitura?" }
