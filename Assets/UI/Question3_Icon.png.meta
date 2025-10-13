@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34cfc3c73e572df4d9ad1b8dd2479265
+guid: 93d1e33e9d6aee64d92dc8578007105e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -112,111 +112,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Livro3 1_0
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 0
-        width: 497
-        height: 280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6e03f32ce4b59df0800000000000000
-      internalID: -174034084275483027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Livro3 1_1
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 207
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82a16035b898bf430800000000000000
-      internalID: 3817796340612995624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Livro3 1_2
+      name: Group 27_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 95
-        width: 28
-        height: 30
+        y: 0
+        width: 692
+        height: 1272
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b415e28d2dab5c070800000000000000
-      internalID: 8126106517392740683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Livro3 1_3
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 83
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db8caa7aec841b7f0800000000000000
-      internalID: -598617223050114883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Livro3 1_4
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 88
-        width: 30
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da9d8a99bd1d5abc0800000000000000
-      internalID: -3772378371746899539
+      spriteID: 1a03d0ce7652c8760800000000000000
+      internalID: 7461379810918215841
       vertices: []
       indices: 
       edges: []
@@ -226,7 +138,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -235,11 +147,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Livro3 1_0: -174034084275483027
-      Livro3 1_1: 3817796340612995624
-      Livro3 1_2: 8126106517392740683
-      Livro3 1_3: -598617223050114883
-      Livro3 1_4: -3772378371746899539
+      Group 27_0: 7461379810918215841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
