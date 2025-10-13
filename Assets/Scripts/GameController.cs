@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -6,8 +7,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+public enum GameState
+{
+    Menu,
+    Quiz,
+    Final
+}
+
 public class GameController : MonoBehaviour
 {
+    public GameObject menuCanvas;
+    public GameObject quizCanvas;
+    public GameObject finalCanvas;
+    public GameObject bookCanvas;
+    
     public int pageIndex = 0;
     public Button buttonA;
     public Button buttonB;
@@ -22,6 +35,8 @@ public class GameController : MonoBehaviour
     public Color optionsTextSelectedColor;
     public Image questionIcon;
     public List<Sprite> questionsIcons = new List<Sprite>(5);
+    public AutoFlip autoFlipBook;
+    public Book book;
     
     public static string choice;
     public static int classico = 0;
@@ -40,16 +55,14 @@ public class GameController : MonoBehaviour
     
     
     private Color _optionsTextDefaultColor;
+    private Perfil _perfil;
+    private GameState _gameState = GameState.Menu;
 
     private void Awake()
     {
         _optionsTextDefaultColor = textA.color;
-    }
-
-    void Start()
-    {
-        confirmButton.interactable = false;
-
+        _perfil = GetComponent<Perfil>();
+        
         options1 = new Dictionary<string, string>
         {
             { "A", "Um enredo profundo, com reflexões filosóficas ou sociais;" },
@@ -99,9 +112,67 @@ public class GameController : MonoBehaviour
             { "question", "5. Que tipo de leitura mais combina com seu momento atual?" }
         };
         pages.Add(options5);
-
-        UpdatteQuestionsPage();
     }
+
+    private void Start()
+    {
+        _gameState = GameState.Menu;
+        
+        menuCanvas.SetActive(true);
+        quizCanvas.SetActive(false);
+        finalCanvas.SetActive(false);
+    }
+
+    public void FlipPage()
+    {
+        StartCoroutine(FlipPagRoutine());
+    }
+    
+    private IEnumerator FlipPagRoutine()
+    {
+        if (_gameState == GameState.Menu)
+        {
+            _gameState = GameState.Quiz;
+            menuCanvas.SetActive(false);
+            finalCanvas.SetActive(false);
+        }
+        
+        if(_gameState == GameState.Quiz)
+        {
+            if (pageIndex >= pages.Count)
+            {
+                _gameState = GameState.Final;
+                quizCanvas.SetActive(false);
+                finalCanvas.SetActive(true);
+                var perfil = _perfil.GetPerfil();
+                book.bookPages[book.bookPages.Length - 1] = perfil;
+            }
+            else
+            {
+                quizCanvas.SetActive(false);
+                UpdatteQuestionsPage();
+            }
+        }
+        
+        autoFlipBook.FlipRightPage();
+        
+        yield return new WaitForSeconds(1.5f); // Espera 1 segundo (ajuste conforme necessário)
+        
+        if(_gameState == GameState.Quiz)
+        {
+            quizCanvas.SetActive(true);
+        }
+        
+    }
+
+    /*private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            ScreenCapture.CaptureScreenshot($"screenshot_{DateTime.Now:yyyyMMdd_HHmmss}.png");
+            Debug.Log("Screenshot taken!");
+        }
+    }*/
 
     public void UpdateButtomStatus()
     {
@@ -174,13 +245,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void UpdatteQuestionsPage()
-    {
-        if (pageIndex >= pages.Count)
-        {
-            SceneManager.LoadScene(1);
-            return;
-        }
+    public void UpdatteQuestionsPage() {
 
         pageNow = pages[pageIndex];
         textA.text = pageNow["A"];
@@ -206,16 +271,35 @@ public class GameController : MonoBehaviour
         else if (choice == "c") { curioso++; }
         else if (choice == "d") { intuitivo++; }
         pageIndex++;
-        UpdatteQuestionsPage();
+        Debug.Log(pageIndex);
+        FlipPage();
     }
     
     [RuntimeInitializeOnLoadMethod]
-    public static void OnRuntimeMethodLoad()
+    private static void OnRuntimeMethodLoad()
     {
         classico = 0;
         emotivo = 0;
         curioso = 0;
         intuitivo = 0;
         choice = null;
+    }
+
+    public void Reset()
+    {
+        classico = 0;
+        emotivo = 0;
+        curioso = 0;
+        intuitivo = 0;
+        choice = null;
+        pageIndex = 0;
+        book.currentPage = 0;
+        book.UpdateBook();
+        
+        menuCanvas.SetActive(true);
+        quizCanvas.SetActive(false);
+        finalCanvas.SetActive(false);
+
+        _gameState = GameState.Menu;
     }
 }

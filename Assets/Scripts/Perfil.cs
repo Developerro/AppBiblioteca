@@ -25,9 +25,12 @@ public class Perfil : MonoBehaviour
     public List<Sprite> perfilIcons;
 
     private Dictionary<Perfis, Sprite> _icons = new Dictionary<Perfis, Sprite>();
+    private GameController _gameController;
 
     private void Awake()
     {
+        _gameController = GetComponent<GameController>();
+        
         foreach (Perfis perf in Enum.GetValues(typeof(Perfis)))
         {
             var icon = perfilIcons.FirstOrDefault();
@@ -37,6 +40,10 @@ public class Perfil : MonoBehaviour
     }
 
     void Start()
+    {
+    }
+
+    public Sprite GetPerfil()
     {
         int maiorValor = Mathf.Max(GameController.classico, GameController.emotivo, GameController.curioso,
             GameController.intuitivo);
@@ -58,12 +65,12 @@ public class Perfil : MonoBehaviour
         }
         
         perfilIconImage.sprite = _icons[perfilFinal];
-        Debug.Log(perfilFinal);
+        
+        return _icons[perfilFinal];
     }
 
     public void Reset()
     {
-        GameController.OnRuntimeMethodLoad();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        _gameController.Reset();
     }
 }
