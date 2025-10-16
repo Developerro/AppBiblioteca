@@ -316,8 +316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "COME\xC7AR"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d7235ef3ede7a0d47bf5399e87994262, type: 2}
-  m_sharedMaterial: {fileID: 2356909746430213370, guid: d7235ef3ede7a0d47bf5399e87994262, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
