@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3beed2a322d4ea54e94245a827a37ccc
+guid: bc2282e3283eda742b18760487267ee2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5922671765336720551
-    second: Page5_0
+      213: 7461379810918215841
+    second: Group 27_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -88,6 +88,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
