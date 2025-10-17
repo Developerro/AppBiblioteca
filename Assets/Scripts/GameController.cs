@@ -68,9 +68,9 @@ public class GameController : MonoBehaviour
         
         options1 = new Dictionary<string, string>
         {
-            { "A", "Um enredo profundo, com reflexões filosóficas ou sociais;" },
-            { "B", "Emoções intensas e personagens com histórias marcantes;" },
-            { "C", "Mistérios, enigmas e reviravoltas inesperadas;" },
+            { "A", "Um enredo profundo, com reflexões filosóficas ou sociais." },
+            { "B", "Emoções intensas e personagens com histórias marcantes." },
+            { "C", "Mistérios, enigmas e reviravoltas inesperadas." },
             { "D", "Temas sobre autoconhecimento, espiritualidade ou mudanças de vida." },
             { "question", "1. O que mais te atrai ao escolher um livro?" }
         };
@@ -78,29 +78,29 @@ public class GameController : MonoBehaviour
 
         options2 = new Dictionary<string, string>
         {
-            { "A", "Inspirado(a) a pensar mais criticamente sobre o mundo" },
-            { "B", "Emocionado(a), como se tivesse vivido aquela história" },
-            { "C", "Motivado(a) a pesquisar mais sobre o tema ou autor" },
-            { "D", "Transformado(a), como se tivesse aprendido algo sobre si mesmo(a)" },
+            { "A", "Inspirado(a) a pensar mais criticamente sobre o mundo." },
+            { "B", "Emocionado(a), como se tivesse vivido aquela história." },
+            { "C", "Motivado(a) a pesquisar mais sobre o tema ou autor." },
+            { "D", "Transformado(a), como se tivesse aprendido algo sobre si mesmo(a)." },
             { "question", "2. Como você se sente ao terminar uma boa leitura?" }
         };
         pages.Add(options2);
 
         options3 = new Dictionary<string, string>
         {
-            { "A", " “1984” – George Orwell / Clássicos da literatura mundial;" },
-            { "B", "“A Culpa é das Estrelas” – John Green / Romances intensos;" },
-            { "C", " “O Código Da Vinci” – Dan Brown / Ficção investigativa;" },
-            { "D", "“O Poder do Agora” – EckhartTolle / Desenvolvimento pessoal." },
+            { "A", " “1984” – George Orwell / Clássicos da literatura mundial." },
+            { "B", "“A Culpa é das Estrelas” – John Green / Romances intenso." },
+            { "C", " “O Código Da Vinci” – Dan Brown / Ficção investigativa." },
+            { "D", "“O Poder do Agora” – Eckhart Tolle / Desenvolvimento pessoal." },
             { "question", "3. Qual desses livros (ou estilos) mais te chama a atenção?" }
         };
         pages.Add(options3);
 
         options4 = new Dictionary<string, string>
         {
-            { "A", "Literatura clássica ou não-ficção filosófica;" },
-            { "B", "Romance, drama ou fantasia com foco emocional;" },
-            { "C", "Suspense, ficção científica ou thrillers;" },
+            { "A", "Literatura clássica ou não-ficção filosófica." },
+            { "B", "Romance, drama ou fantasia com foco emocional." },
+            { "C", "Suspense, ficção científica ou thrillers." },
             { "D", "Autoajuda, espiritualidade ou psicologia." },
             { "question", "4. Você está em uma livraria. Para onde vai primeiro?" }
         };
@@ -108,10 +108,10 @@ public class GameController : MonoBehaviour
 
         options5 = new Dictionary<string, string>
         {
-            { "A", "Um livro que me faça refletir sobre a sociedade e os valores humanos" },
-            { "B", "Uma história envolvente, para eu me emocionar e viajar na imaginação" },
-            { "C", "Um enredo cheio de pistas e mistérios que estimule meu raciocínio" },
-            { "D", "Uma leitura que me ajude a crescer como pessoa e repensar minha vida" },
+            { "A", "Um livro que me faça refletir sobre a sociedade e os valores humanos." },
+            { "B", "Uma história envolvente, para eu me emocionar e viajar na imaginação." },
+            { "C", "Um enredo cheio de pistas e mistérios que estimule meu raciocínio." },
+            { "D", "Uma leitura que me ajude a crescer como pessoa e repensar minha vida." },
             { "question", "5. Que tipo de leitura mais combina com seu momento atual?" }
         };
         pages.Add(options5);
